@@ -17,6 +17,8 @@ def percentage_decrease(month_1, month_2):
 
     return percentage_decrease
 
+
+
 def run_sales():
     data = read_sales_data()
 
@@ -36,16 +38,18 @@ def run_sales():
 
     print('Maximum sales in a year : {}'. format(max(sales)))
 
-    percentage_decrease(sales[0], sales[6])
-    print('Percentage decrease difference between Jan and Jun Sales: '
-          '{}'.format((percentage_decrease(sales[0], sales[6]))))
+    percentage_decrease(sales[0], sales[1])
+    print("Jan-Feb: {}".format(round(percentage_decrease(sales[0], sales[6]), 2)))
 
-    percentage_decrease(sales[0], sales[11])
-    print('Percentage decrease difference between Jan and Dec Sales: '
-          '{}'.format((percentage_decrease(sales[0], sales[11]))))
+    percentage_decrease(sales[1], sales[2])
+    print("Feb-March: {}".format(round(percentage_decrease(sales[1], sales[2]), 2)))
+
+    percentage_decrease(sales[2], sales[3])
+    print("March-April: {}".format(round(percentage_decrease(sales[2], sales[3]), 2)))
 
 
 run_sales()
+print("*"* 50)
 
 # Dataset 2: books.csv
 
@@ -66,7 +70,19 @@ def run_books():
     for row in data:
         book_data = (row['title'])
         books.append(book_data)
-    print('All books: {}'.format(books))
+    print('All books_: {}'.format(books))
+
+
+
+    ratings = []
+    for row in data:
+        rating_data = (row['ratings_count'])
+        ratings.append((rating_data))
+    print('All ratings:{}'.format(ratings))
+
+    print('Maximum ratings: {}'. format(max(ratings)))
+
+
 
 
 run_books()

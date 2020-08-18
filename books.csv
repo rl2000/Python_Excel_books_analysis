@@ -1,0 +1,100 @@
+bookID,title,authors,average_rating,isbn,isbn13,language_code,  num_pages,ratings_count,text_reviews_count,publication_date,publisher,Random
+10566,Lisey's Story,Stephen King,3.68,743289412,9.78E+12,eng,513,59097,2709,10/24/2006,Scribner,0.0001641699
+10332,Mandy,Julie Andrews Edwards/Johanna Westerman,4.24,61131628,9.78E+12,eng,320,9944,846,8/15/2006,HarperCollins,0.0012064803
+9516,Persepolis: The Story of a Childhood (Persepolis  #1),Marjane Satrapi/Mattias Ripa,4.25,037571457X,9.78E+12,eng,153,144121,8131,06/01/2004,Pantheon,0.0015050539
+8074,The Wind Thief,Judi Barrett/Diane Dawson Hearn,3.8,689305648,9.78E+12,eng,32,4,1,01/01/1977,Atheneum Books,0.0018844816
+1888,Pride and Prejudice,Jane Austen,4.26,192802380,9.78E+12,eng,333,2399,253,02/11/2004,Oxford University Press,0.0019153293
+7615,Farm Animals (A Chunky Book),Phoebe Dunn,3.86,394862546,9.78E+12,eng,28,35,4,02/12/1984,Random House Books for Young Readers,0.0027275408
+4287,Middlesex Borough (Images of America: New Jersey),Middlesex Borough Heritage Committee,5,738511676,9.78E+12,eng,128,2,0,3/17/2003,Arcadia Publishing,0.0027290233
+7244,The Poisonwood Bible,Barbara Kingsolver,4.06,60786507,9.78E+12,eng,546,613758,19846,07/05/2005,Harper Perennial Modern Classics,0.0030591088
+11313,Silver on the Tree (The Dark is Rising  #5),Susan Cooper,4.15,689840330,9.78E+12,eng,274,27802,507,12/01/2000,Margaret K. McElderry Books,0.0031074239
+11728,The Blue Flower,Penelope Fitzgerald,3.47,395859972,9.78E+12,eng,226,3334,514,4/15/1997,Mariner Books,0.0031738622
+7983,Salamandastron (Redwall  #5),Brian Jacques/Gary Chalk,4.07,142501522,9.78E+12,en-US,400,26237,240,9/15/2003,Firebird,0.0038762977
+4519,A Framework for Understanding Poverty,Ruby K. Payne,3.9,1929229488,9.78E+12,eng,199,3690,518,02/09/2006,AHA! Process,0.0040187039
+5348,The Testament,John Grisham/Jorma-Veikko Sappinen,3.86,440234743,9.78E+12,eng,535,89014,2361,12/28/1999,Island,0.0042166487
+7480,The Girl at the Lion d'Or,Sebastian Faulks,3.58,375704531,9.78E+12,eng,246,4630,272,12/07/1999,Vintage,0.0042256164
+1586,Lysistrata,Aristophanes/Douglass Parker,3.85,451616227,9.78E+12,eng,98,19,2,02/01/1970,Signet,0.0049901486
+9337,"How To Meditate: An Anthology Of Talks On Meditation And ""Meditation: The Bridge Is Flowing But The River Is Not""",Frederick P. Lenz,0,1932206108,9.78E+12,eng,228,0,0,01/01/2004,Frederick P. Lenz Foundation for American Buddhism,0.0051096463
+10969,Dragonfly in Amber (Outlander  #2),Diana Gabaldon,4.32,385302312,9.78E+12,eng,743,1088,118,07/01/1992,Delacorte Press,0.0051100806
+6151,Life of the Beloved: Spiritual Living in a Secular World,Henri J.M. Nouwen,4.28,824519868,9.78E+12,eng,160,7551,498,10/01/2002,Crossroad,0.0053443418
+10814,Here Is New York,E.B. White/Roger Angell/Barbara Cohen/Judith Stonehill,4.3,1892145022,9.78E+12,eng,58,5379,544,01/01/2000,Little Bookroom,0.0057319094
+11012,Dubliners,James Joyce/Jeri Johnson/ThiÃªn LÆ°Æ¡ng,3.85,192839993,9.78E+12,eng,207,91755,3246,3/15/2001,Oxford University Press,0.0059852545
+9629,Zen in the Art of Writing: Essays on Creativity,Ray Bradbury,4.1,1877741094,9.78E+12,en-US,176,909,135,08/01/1993,Joshua Odell Editions,0.0066991261
+66,The Changeling (Daughters of England  #15),Philippa Carr,3.98,449146979,9.78E+12,eng,369,345,12,8/28/1990,Ivy Books,0.0067958429
+11751,All Aunt Hagar's Children: Stories,Edward P. Jones,3.78,60557567,9.78E+12,en-US,399,1614,212,8/29/2006,Amistad,0.0072126058
+10951,The Last Innocent Man,Phillip Margolin,3.91,60739681,9.78E+12,eng,352,1667,57,1/25/2005,HarperTorch,0.0077225817
+3530,Kare First Love  Vol. 10 (Kare First Love  #10),Kaho Miyasaka,4.09,1421505487,9.78E+12,eng,208,715,18,12/12/2006,VIZ Media LLC,0.008080402
+7718,The Metamorphosis (Graphic Novel Adaptation),Peter Kuper/Franz Kafka/Kerstin Hasenpusch,3.79,1400052998,9.78E+12,eng,80,3192,307,7/20/2004,Broadway Books,0.008081438
+6144,The Moonstone,Wilkie Collins/P.D. James,3.91,192100289,9.78E+12,eng,576,74,6,06/10/1999,Oxford University Press  USA,0.0082661846
+2883,Bleach  Volume 12,Tite Kubo,4.36,1421504030,9.78E+12,eng,208,8948,86,04/04/2006,VIZ Media LLC,0.0084528787
+5805,V for Vendetta,Alan Moore/David   Lloyd,4.25,1401207928,9.78E+12,eng,296,234954,4058,11/01/2005,Vertigo,0.0084858666
+2715,Salt: A World History,Mark Kurlansky,3.74,142001619,9.78E+12,eng,484,50335,3012,1/28/2003,Penguin Books,0.0090344035
+5661,Holiday Romance and Other Writings for Children,Charles Dickens,3.32,460876015,9.78E+12,eng,368,8,3,05/01/1995,Everyman Paperback Classics,0.0091299908
+7679,The Terminal Man,Michael Crichton,3.36,60092572,9.78E+12,eng,266,21457,576,11/05/2002,Avon,0.0092526707
+74,The John McPhee Reader (John McPhee Reader  #1),John McPhee/William Howarth,4.42,374517193,9.78E+12,eng,416,562,37,06/01/1982,Farrar  Straus and Giroux,0.0095673379
+7881,Little Plum,Rumer Godden/Jean Primrose,4.22,140307370,9.78E+12,eng,144,11,1,08/01/1987,Puffin Books,0.0096110148
+6988,Yeah  I Said It,Wanda Sykes,3.71,743482719,9.78E+12,en-US,247,458,66,9/13/2005,Atria Books,0.0101681268
+11426,Family (Firstborn  #4),Karen Kingsbury,4.42,842387463,9.78E+12,eng,345,8370,143,10/01/2006,Tyndale House Publishers,0.0104626671
+10587,The Man in the Black Suit: 4 Dark Tales,Stephen King/Ana Juan/John Cullum/Becky Ann Baker/ÃÃ±igo JÃ¡uregui/Peter Gerety/Arliss Howard,3.78,074352585X,9.78E+12,eng,128,1369,101,11/01/2002,Simon  Schuster Audio,0.0105175677
+4829,Before The Mayflower A History of Black America,Lerone Bennett Jr.,4.44,140072144,9.78E+12,en-US,70,26,1,05/01/1984,Penguin Books,0.0106095479
+337,El perfume: Historia de un asesino,Patrick SÃ¼skind,4.02,8432216062,9.79E+12,spa,239,4136,255,06/01/2002,Booket,0.0106244017
+7064,The Belly of Paris (Les Rougon-Macquart  #3),Ã‰mile Zola/Ernest Alfred Vizetelly/Henry Vizetelly,3.91,1557130663,9.78E+12,eng,397,8,1,12/01/1995,Sun and Moon Press,0.0107918689
+4964,Love You Until--,Lisa McCourt/Cyd Moore,4.5,809166585,9.78E+12,eng,32,4,0,12/03/2005,Paulist Press,0.0108904076
+11934,The Fantasy Worlds of Peter Beagle,Peter S. Beagle,4.21,345289676,9.78E+12,eng,430,530,35,09/12/1979,Del Rey,0.0110453327
+10261,The Art of Richard P. Feynman,Michelle Feynman,4.31,2884490477,9.78E+12,en-US,174,13,2,07/01/1995,Routledge,0.0114178303
+5534,Men's Health: Book of Muscle - The World's Most Complete Guide to Building Your Body,Ian King/Lou Schuler/Frederick Deluvier,3.98,1579547699,9.78E+12,en-US,364,256,13,10/17/2003,Rodale Books,0.0115540312
+4108,I Blink: And Other Questions About My Body,Brigid Avison,3.92,753456109,9.78E+12,eng,32,36,1,4/25/2003,Kingfisher,0.0116278368
+6635,The Enneagram Made Easy: Discover the 9 Types of People,Renee Baron/Elizabeth Wagele,3.82,62510266,9.78E+12,eng,161,1844,171,03/11/1994,HarperSanFrancisco,0.011955627
+5486,Andrew Carnegie,David Nasaw,3.99,1594201048,9.78E+12,eng,896,2580,205,10/24/2006,Penguin Press HC  The,0.0121914544
+5128,The Doors of Perception & Heaven and Hell,Aldous Huxley,3.92,60595183,9.78E+12,eng,187,30012,797,05/04/2004,Harper Perennial Modern Classics,0.0125229789
+8552,Bolt (Kit Fielding  #2),Dick Francis,4.04,425202887,9.78E+12,eng,288,5043,121,05/03/2005,G.P. Putnam's Sons,0.0125446669
+4997,La Jeune fille Ã  la perle,Tracy Chevalier/Marie-Odile Fortier-Masek,3.88,2070417948,9.78E+12,fre,313,618,38,3/16/2002,Gallimard,0.0127411697
+1560,Four Plays: The Clouds/The Birds/Lysistrata/The Frogs,Aristophanes/William Arrowsmith/Richmond Lattimore/Douglass Parker,4.06,452007178,9.78E+12,eng,624,6086,79,11/01/1984,Plume,0.0130504803
+7966,Rebekah (Women of Genesis  #2),Orson Scott Card,3.84,076534128X,9.78E+12,eng,416,7487,617,3/27/2012,Forge,0.0137338494
+9582,Ein Platz fÃ¼r Hot Dogs: Another Roadside Attraction,Tom Robbins/Pociao/Roberto de Hollanda,3.98,3499154293,9.78E+12,ger,376,3,0,06/01/1997,Rowohlt Verlag,0.014603673
+3732,Selected Poems of Herman Melville,Herman Melville/Robert Penn Warren,3.77,1567922694,9.78E+12,eng,512,12,3,09/10/2004,David R. Godine Publisher,0.0151040681
+1426,Warrior of the Light,Paulo Coelho,3.7,60527986,9.78E+12,en-US,142,22662,945,3/30/2004,HarperOne,0.0155655159
+139,ebay Timesaving Techniques for Dummies,Marsha Collier,3.39,764559915,9.78E+12,en-US,391,22,1,5/31/2004,Wiley,0.0170825325
+2068,Darwin's Dangerous Idea: Evolution and the Meanings of Life,Daniel C. Dennett,4.04,068482471X,9.78E+12,eng,588,13563,235,06/12/1996,Simon  Schuster,0.0176559841
+3698,The Quiet American,Graham Greene/Robert  Stone,3.97,143039024,9.78E+12,eng,180,37620,2298,8/31/2004,Penguin Classics Deluxe Editions,0.0177060115
+8541,Straight,Dick Francis,4.05,042520846X,9.78E+12,eng,320,3513,143,02/07/2006,G.P. Putnam's Sons,0.0178392281
+10920,Cold Mountain,Charles Frazier,3.86,802142842,9.78E+12,eng,356,208001,4972,09/01/2006,Grove Press,0.0179789399
+9345,Palestine: Peace Not Apartheid,Jimmy Carter,3.82,743285026,9.78E+12,eng,288,2864,349,11/30/2006,Simon & Schuster,0.017993482
+1843,Caught Inside: A Surfer's Year on the California Coast,Daniel Duane,3.87,865475091,9.78E+12,eng,256,633,60,04/10/1997,North Point Press,0.018256496
+9557,Sputnik Sweetheart,Haruki Murakami/Philip Gabriel,3.83,99448475,9.78E+12,eng,229,78434,3464,10/03/2002,Vintage,0.0184825428
+11413,Captivating: Unveiling the Mystery of a Woman's Soul,John Eldredge/Stasi Eldredge,3.91,785264698,9.78E+12,en-US,243,42509,738,04/05/2005,Nelson Books,0.018574621
+2968,The Complete Short Stories of Mark Twain,Mark Twain/Charles Neider,4.28,553211951,9.78E+12,eng,848,5710,142,03/01/1984,Bantam Classics,0.0186196279
+5874,Regeneration Through Violence: The Mythology of the American Frontier  1600â€“1860,Richard Slotkin,4.3,806132299,9.78E+12,eng,670,163,16,4/15/2000,University of Oklahoma Press,0.0187932398
+4165,The Hip-Hop Church: Connecting with the Movement Shaping Our Culture,Efrem Smith/Phil   Jackson,3.91,830833293,9.78E+12,eng,227,21,4,12/15/2005,IVP Books,0.0188051728
+6296,When Rabbit Howls,Truddi Chase/Robert A. Phillips,4.04,425183319,9.78E+12,eng,400,262,32,02/05/2002,Berkley,0.0188222796
+7347,The Book of Lost Tales  Part One (The History of Middle-Earth  #1),J.R.R. Tolkien/Christopher Tolkien,3.83,345375211,9.78E+12,eng,367,10727,203,06/01/1992,Del Rey/Ballantine Books,0.019136165
+2179,A Sentimental Education,Gustave Flaubert/Douglas ParmÃ©e,3.83,192836226,9.78E+12,eng,464,105,7,5/18/2000,Oxford University Press,0.0193215822
+4332,Satan's Tail (Dreamland  #7),Dale Brown/Jim DeFelice,4,60094419,9.78E+12,eng,405,339,9,7/26/2005,HarperTorch,0.0194505626
+9595,Slapstick  or Lonesome No More!,Kurt Vonnegut Jr.,3.87,385334230,9.78E+12,eng,288,31084,1062,05/11/1999,Dial Press,0.0196701673
+11311,The Boggart,Susan Cooper/Omar Rayyan,3.75,1416905278,9.78E+12,eng,196,4085,181,5/31/2005,Aladdin Paperbacks,0.0196838215
+10787,The Hemingway Women: Those Who Love Him - The Wives And Others,Bernice Kert,4.17,393318354,9.78E+12,eng,556,279,32,12/17/1998,W. W. Norton  Company,0.0198074964
+12095,The Bald Soprano and Other Plays,EugÃ¨ne Ionesco/Donald M. Allen,4.04,802130798,9.78E+12,eng,160,5524,106,01/12/1994,Grove Press,0.0203356737
+11990,The Rebel,Albert Camus/Anthony Bower/Herbert Read,4.15,679733841,9.78E+12,eng,320,9227,256,01/01/1992,Vintage,0.0205234132
+7338,Tolkien on Film: Essays on Peter Jackson's The Lord of the Rings,Janet Brennan Croft/Mark P. Shea/Amy H. Sturgis,3.79,1887726098,9.78E+12,eng,323,39,2,05/09/2005,Mythopoeic Press,0.0206682745
+10518,A Theory of Semiotics,Umberto Eco,4.01,253202175,9.78E+12,eng,368,1035,34,02/01/1978,Indiana University Press,0.0212451619
+1362,The Histories,Herodotus/Aubrey de SÃ©lincourt/John M. Marincola,3.99,140449086,9.78E+12,eng,716,34727,597,1/30/2003,Penguin Books,0.0215651847
+1584,Cliffs Notes on Aristophanes' Lysistrata  The Birds  The Clouds  The Frogs,W. John Campbell,2.8,822007762,49086007763,eng,80,5,0,12/29/1983,Cliffs Notes,0.0217729315
+9164,Ballet for Dummies,Scott Speck/Evelyn Cisneros,4.01,764525689,9.78E+12,eng,348,78,6,10/03/2003,For Dummies,0.0238034187
+9791,A Walk in the Woods: Rediscovering America on the Appalachian Trail,Bill Bryson,4.06,307279464,9.78E+12,eng,397,308840,14993,12/26/2006,Anchor Books,0.023928609
+7512,The Beach House (Beach House #1),Mary Alice Monroe,4.2,778322947,9.78E+12,eng,491,10716,1029,4/25/2006,Mira Books,0.0242600302
+11563,Danse Macabre,Stephen King,3.64,042518160X,9.78E+12,eng,400,21063,460,09/01/2001,Berkley,0.0248811761
+11511,L'Ã‰chiquier du mal,Dan Simmons,3.9,2207254410,9.78E+12,fre,999,63,7,06/08/2003,DenoÃ«l,0.0253722576
+4264,Fever Pitch,Nick Hornby,3.74,1573226882,9.78E+12,eng,247,28830,1069,03/01/1998,Riverhead Books,0.0256796681
+2046,Stories and Early Novels: Pulp Stories / The Big Sleep / Farewell  My Lovely / The High Window,Raymond Chandler/Frank MacShane,4.5,1883011078,9.78E+12,eng,1199,1324,66,10/01/1995,Library of America,0.0257915074
+10235,Mountains Beyond Mountains: The Quest of Dr. Paul Farmer  a Man Who Would Cure the World,Tracy Kidder,4.21,812973011,9.78E+12,eng,333,63813,4347,8/31/2004,Random House Trade,0.0259463275
+10780,Hemingway: The Paris Years,Michael S. Reynolds,4.17,393318796,9.78E+12,eng,402,490,35,5/17/1999,W. W. Norton  Company,0.0260578311
+7520,Path of the Assassin (Scot Harvath  #2),Brad Thor,4.17,141651631X,9.78E+12,eng,367,15270,485,07/01/2005,Pocket Books,0.026809838
+34,The Fellowship of the Ring (The Lord of the Rings  #1),J.R.R. Tolkien,4.36,618346252,9.78E+12,eng,398,2128944,13670,09/05/2003,Houghton Mifflin Harcourt,0.0270743391
+7559,Candide: or  Optimism,Voltaire/Chris Ware/Theo Cuffe/Michael  Wood,3.77,143039423,9.78E+12,eng,155,1929,193,10/25/2005,Penguin Group,0.0277559579
+822,The Confusion (The Baroque Cycle  #2),Neal Stephenson,4.26,60733357,9.78E+12,en-US,815,19320,565,6/14/2005,William Morrow Paperbacks,0.0281203885
+4055,Soul Mates: Honouring the Mysteries of Love and Relationship,Thomas  Moore,3.99,60925752,9.78E+12,eng,288,4372,81,12/13/2013,Harper Perennial,0.0281544777
+9498,Beauty: The Invisible Embrace,John O'Donohue,4.47,60957263,9.78E+12,en-US,261,678,78,03/01/2005,Harper Perennial,0.0283765454
+1658,American Government: Continuity and Change  Alternate Edition,Karen  O'Connor/Larry J. Sabato,2.83,321317106,9.78E+12,eng,664,0,0,03/11/2005,Longman Publishing Group,0.0284924135
+9799,The Fortress of Solitude,Jonathan Lethem,3.88,571219357,9.78E+12,eng,528,16714,1010,01/06/2005,Faber and Faber,0.0287717962
+11334,Song of Solomon,Toni Morrison,4.06,140003342X,9.78E+12,eng,337,73894,2763,06/08/2004,Vintage,0.0290837936
+5137,The Flame Trees of Thika: Memories of an African Childhood,Elspeth Huxley,4.12,141183780,9.78E+12,en-GB,281,4773,217,02/01/2000,Penguin Classics,0.0292116532

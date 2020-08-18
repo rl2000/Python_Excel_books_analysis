@@ -47,3 +47,27 @@ def run_sales():
 
 run_sales()
 
+# Dataset 2: books.csv
+
+def read_books_data():
+    data = []
+
+    with open('books.csv', 'r') as books_csv:
+        spreadsheet = csv.DictReader(books_csv)
+        for row in spreadsheet:
+            data.append(row)
+
+    return data
+
+def run_books():
+    data = read_books_data()
+
+    books = []
+    for row in data:
+        book_data = (row['title'])
+        books.append(book_data)
+    print('All books: {}'.format(books))
+
+
+run_books()
+

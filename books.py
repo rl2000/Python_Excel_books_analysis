@@ -1,4 +1,9 @@
 import csv
+import random
+# import pandas as pd
+# import numpy as np
+# df = pd.read_csv('books.csv')
+# print(df.dtypes)
 
 def read_sales_data():
     sales_data = []
@@ -39,13 +44,16 @@ def run_sales():
     print('Maximum sales in a year : {}'. format(max(sales)))
 
     percentage_decrease(sales[0], sales[1])
-    print("Jan-Feb: {}".format(round(percentage_decrease(sales[0], sales[6]), 2)))
+    print("Jan-Feb sales decreased by %: {}".format(round(percentage_decrease(sales[0], sales[6]), 2)))
 
     percentage_decrease(sales[1], sales[2])
-    print("Feb-March: {}".format(round(percentage_decrease(sales[1], sales[2]), 2)))
+    print("Feb-March sales decreased by %: {}".format(round(percentage_decrease(sales[1], sales[2]), 2)))
 
     percentage_decrease(sales[2], sales[3])
-    print("March-April: {}".format(round(percentage_decrease(sales[2], sales[3]), 2)))
+    print("March-April sales decreased by %: {}".format(round(percentage_decrease(sales[2], sales[3]), 2)))
+
+    percentage_decrease(sales[3], sales[4])
+    print("April-May sales decreased by %: {}".format(round(percentage_decrease(sales[2], sales[3]), 2)))
 
 
 run_sales()
@@ -68,20 +76,40 @@ def run_books():
 
     books = []
     for row in data:
+        books.append(data)
+    # print('All books_: {}'.format(books))
+
+
+
+
+
+    title = []
+    for row in data:
         book_data = (row['title'])
-        books.append(book_data)
-    print('All books_: {}'.format(books))
+        title.append(book_data)
+    print('All book titles: {}'.format(title))
 
-
+    author = []
+    for row in data:
+        author_data = (row['authors'])
+        author.append(author_data)
+    print('All book authors: {}'.format( author))
 
     ratings = []
     for row in data:
-        rating_data = (row['ratings_count'])
+        rating_data = int(row['ratings_count'])
         ratings.append((rating_data))
+        ratings.sort()
     print('All ratings:{}'.format(ratings))
 
-    print('Maximum ratings: {}'. format(max(ratings)))
+    print('Book with maximum ratings: {}'. format(max(ratings)))
 
+    top_3_books = sorted(zip(ratings, title), reverse=True)[:3]
+    print("Top 3 books with highest ratings:{}".format(top_3_books))
+
+
+    chosen_book = random.choice(title)
+    print('Random book of the day: {}'.format(chosen_book))
 
 
 

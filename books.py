@@ -28,10 +28,18 @@ def run_sales():
     data = read_sales_data()
 
     sales = []
+
     for row in data:
         sale = int(row['sales'])
         sales.append(sale)
     print('All of the sales from Jan to Dec 2018: {}'.format(sales))
+
+    expenditures = []
+
+    for row in data:
+        spending = int(row['expenditure'])
+        expenditures.append(spending)
+    print('All of the sales from Jan to Dec 2018: {}'.format(expenditures))
 
     total = sum(sales)
     print('Total sales across all months: {}'.format(total))
@@ -53,8 +61,30 @@ def run_sales():
     print("March-April sales decreased by %: {}".format(round(percentage_decrease(sales[2], sales[3]), 2)))
 
     percentage_decrease(sales[3], sales[4])
-    print("April-May sales decreased by %: {}".format(round(percentage_decrease(sales[2], sales[3]), 2)))
+    print("April-May sales decreased by %: {}".format(round(percentage_decrease(sales[3], sales[4]), 2)))
 
+    percentage_decrease(sales[4], sales[5])
+    print("May-June sales decreased by %: {}".format(round(percentage_decrease(sales[4], sales[5]), 2)))
+
+    percentage_decrease(sales[5], sales[6])
+    print("June-July sales decreased by %: {}".format(round(percentage_decrease(sales[5], sales[6]), 2)))
+
+    percentage_decrease(sales[6], sales[7])
+    print("July-Aug sales decreased by %: {}".format(round(percentage_decrease(sales[6], sales[7]), 2)))
+
+    percentage_decrease(sales[7], sales[8])
+    print("Aug-Sep sales decreased by %: {}".format(round(percentage_decrease(sales[6], sales[7]), 2)))
+
+    percentage_decrease(sales[8], sales[9])
+    print("Sep-Oct sales decreased by %: {}".format(round(percentage_decrease(sales[8], sales[9]), 2)))
+
+    percentage_decrease(sales[9], sales[10])
+    print("Oct-Nov sales decreased by %: {}".format(round(percentage_decrease(sales[9], sales[10]), 2)))
+
+    percentage_decrease(sales[10], sales[11])
+    print("Nov-Dec sales decreased by %: {}".format(round(percentage_decrease(sales[10], sales[11]), 2)))
+
+    print('Maximum expenditure in a year : {}'.format(max(expenditures)))
 
 run_sales()
 print("*"* 50)
@@ -106,6 +136,10 @@ def run_books():
 
     top_3_books = sorted(zip(ratings, title), reverse=True)[:3]
     print("Top 3 books with highest ratings:{}".format(top_3_books))
+
+
+
+
 
 
     chosen_book = random.choice(title)

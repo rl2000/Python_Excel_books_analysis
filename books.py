@@ -1,7 +1,11 @@
 import csv
 import random
 
-############################################################################################
+
+# Business Question: Is there a correlation between sales
+# and expenditure to the profit or loss of sales in each month
+
+#1. Read sales data from spreadsheet
 def read_sales_data():
     sales_data = []
 
@@ -11,28 +15,19 @@ def read_sales_data():
             sales_data.append(row)
 
     return sales_data
-##########################################################################################
-#Function to calculate percentage difference
-def percentage_decrease(new_no, original_no):
-    decrease = (original_no - new_no)
-    difference = (decrease / original_no)
-    percentage_decrease = difference * 100
 
-    return percentage_decrease
-##############################################################################################
 
-#Function to calculate percentage difference
-def percentage_increase(new_no, original_no):
-    increase = (new_no - original_no)
-    increase_difference = (increase / new_no)
-    percentage_increase = increase_difference * 100
+#2. Function to calculate percentage change between sales and expenditure in a month
+def percentage(sales,expenditures):
+    difference = (sales - expenditures)
+    change = (difference / sales)
+    percentage = change * 100
 
-    return percentage_increase
+    return (round(percentage, 2))
 
-########################################################################################
 
-    #Function to calculate profit
-def profit(sales, expenditures):
+#Function to calculate difference between sales and expenditure
+def profit_loss(sales, expenditures):
     if sales > expenditures:
         amount = sales - expenditures
         print('Profit: {}'.format(amount))
@@ -45,14 +40,11 @@ def profit(sales, expenditures):
     return amount
 
 
-
-
-
-
-####################################################################################################
+# 3.Sales analysis
 def run_sales():
     data = read_sales_data()
 
+    #Collect all sales in a list
     sales = []
 
     for row in data:
@@ -60,12 +52,12 @@ def run_sales():
         sales.append(sale)
     print('All of the sales from Jan to Dec 2018: {}'.format(sales))
 
-    #copying the print output to the file
+    #Writing the output to the file
     with open('analysis_sales.txt', 'w') as f:
-        print("******SALES ANALYSIS - 2018******", file=f)
+        print("*********** SALES ANALYSIS - 2018 ***********", file=f)
         print('\nAll of the sales from Jan to Dec 2018:', sales, file=f)
 
-#############################################################################################
+    # Collect all expenditures in a list
     expenditures = []
 
     for row in data:
@@ -73,140 +65,171 @@ def run_sales():
         expenditures.append(spending)
     print('All sales expenditures from Jan to Dec 2018: {}'.format(expenditures))
 
-    # copying the print output to the file
+    #Writing the output to the file
     with open('analysis_sales.txt', 'a') as f:
         print('\nAll sales expenditures from Jan to Dec 2018:', expenditures, file=f)
-############################################################################################
 
+    # Collect all months in a list
     month = []
 
     for row in data:
         sale = (row['month'])
         month.append(sale)
-    #print('All of the sales from Jan to Dec 2018: {}'.format(month))
 
+
+    # Output total sales for all months
     total = sum(sales)
     print('Total sales across all months: {}'.format(total))
 
-    # copying the print output to the file
+    #Writing the output to the file
     with open('analysis_sales.txt', 'a') as f:
         print('\nTotal sales across all months:', total, file=f)
-#######################################################################################################
+
+    # Output total sales for all months
+    total_exp = sum(expenditures)
+    print('Total expenditure across all months: {}'.format(total_exp))
+
+    # Writing the output to the file
+    with open('analysis_sales.txt', 'a') as f:
+        print('\nTotal expenditure across all months:', total_exp, file=f)
+
+    # Output average for all months
     average = total / len(sales)
     print('Average sales from Jan to Dec: {}'.format(round(average)))
 
-    # copying the print output to the file
+    #Writing the output to the file
     with open('analysis_sales.txt', 'a') as f:
         print('\nAverage sales from Jan to Dec:', (round(average)), file=f)
-######################################################################################
-    # copying the print output to the file
-    with open('analysis_sales.txt', 'a') as f:
 
+
+    # ****MIN-MAX SALES****
+
+    # Minimum Sales: Writing the output to the file
+    with open('analysis_sales.txt', 'a') as f:
         print('\n \n \nMinimum sales in a year:', (min(sales)), file=f)
 
 
+    # Minimum Sales: Finding the index of Min sales
     print('Minimum sales in a year : {}'. format(min(sales)))
     min_value = 1521
     with open('analysis_sales.txt', 'a') as f:
         print('\nIndex:', sales.index(min_value), file=f)
 
+    # Minimum Sales: Using the index to find the min sales month
     min_sales_month = month[1]
     with open('analysis_sales.txt', 'a') as f:
         print('\nMonth with minimum sales:', min_sales_month, file=f)
 
+    #Summerising Feb Sales
     with open('analysis_sales.txt', 'a') as f:
-        print('\n \n \nANALYSING FEB SALES ', file=f)
+        print('\n \n \n----SUMMERY OF FEBRUARY SALES (MINIMUM SALES)---- ', file=f)
+        print('\nSales:', sales[1], file=f)
+        print('\nExpenditure:', expenditures[1], file=f)
+        print('\nProfit/Loss:', (profit_loss(sales[1], expenditures[1])), file=f)
+        print('\nPercent Change:', (percentage(sales[1], expenditures[1])), file=f)
 
-        print('\nSales:', sales[2], file=f)
-        print('\nExpenditure:', expenditures[2], file=f)
-        print('\nProfit:', (profit(sales[2], expenditures[2])), file=f)
-
-
-
-    ##############################################################################################
-        # copying the print output to the file
+    # Maximun Sales: Writing the output to the file
     with open('analysis_sales.txt', 'a') as f:
         print('\n \n \nMaximum sales in a year:', (max(sales)), file=f)
 
-
+    # Maximun Sales: Finding the index of Max sales
     max_value = 7479
     with open('analysis_sales.txt', 'a') as f:
         print('\nIndex:', sales.index(max_value), file=f)
 
+    # Maximun Sales: Using the index to find the max sales month
     max_sales_month = month[6]
     with open('analysis_sales.txt', 'a') as f:
         print('\nMonth with maximum sales:', max_sales_month, file=f)
 
-
-
+    # Summerising JULY Sales
     with open('analysis_sales.txt', 'a') as f:
-        print('\n \n \n ANALYSING JULY SALES ', file=f)
-        print('\nSales:', sales[7], file=f)
-        print('\nExpenditure:', expenditures[7], file=f)
-        print('\nProfit:', (profit(sales[7], expenditures[7])), file=f)
+        print('\n \n \n----SUMMERY OF JULY SALES (MAXIMUM SALES)---- ', file=f)
+        print('\nSales:', sales[6], file=f)
+        print('\nExpenditure:', expenditures[6], file=f)
+        print('\nProfit/Loss:', (profit_loss(sales[6], expenditures[6])), file=f)
+        print('\nPercent Change:', (percentage(sales[6], expenditures[6])), file=f)
 
+    # ****MIN-MAX EXPENDITURE****
 
-
-    ##################################################################################################
-
-    # copying the print output to the file
+    # Minimum Expenditure: Writing the output to the file
     with open('analysis_sales.txt', 'a') as f:
-        print('\n \n \n % INCREASE BETWEEN FEB AND JULY SALES IN 2018', file=f)
+        print('\n \n \nMinimum expenditure in a year:', (min(expenditures)), file=f)
 
-        print('\nResult:',(round(percentage_increase(sales[7], sales[1]),2)), file=f)
+    # Minimum Expenditure: Finding the index of Min Expenditure
+    print('Minimum expenditure in a year : {}'.format(min(expenditures)))
+    min_value = 1098
+    with open('analysis_sales.txt', 'a') as f:
+        print('\nIndex:', expenditures.index(min_value), file=f)
 
+    # Minimum Expenditure: Using the index to find the min Expenditure month
+    min_exp_month = month[3]
+    with open('analysis_sales.txt', 'a') as f:
+        print('\nMonth with minimum expenditures:', min_exp_month, file=f)
 
-#####################################################################################################
+    # Summerising APRIL Sales
+    with open('analysis_sales.txt', 'a') as f:
+        print('\n \n \n----SUMMERY OF APRIL SALES (MINIMUM EXPENDITURE)---- ', file=f)
+        print('\nSales:', sales[3], file=f)
+        print('\nExpenditure:', expenditures[3], file=f)
+        print('\nProfit/Loss:', (profit_loss(sales[3], expenditures[3])), file=f)
+        print('\nPercent Change:', (percentage(sales[3], expenditures[3])), file=f)
 
-#business q:  is there a correlation between sales and expenditure and the profit going up or down.
+    # Maximum Expenditure: Writing the output to the file
+    with open('analysis_sales.txt', 'a') as f:
+        print('\n \n \nMaximum expenditure in a year:', (max(expenditures)), file=f)
 
-#######################################################################################
+    # Maximum Expenditure: Finding the index of Max Expenditure
+    print('Maximum expenditure in a year : {}'.format(max(expenditures)))
+    max_value = 3965
+    with open('analysis_sales.txt', 'a') as f:
+        print('\nIndex:', expenditures.index(max_value), file=f)
 
+    # Maximum Expenditure: Using the index to find the max Expenditure month
+    man_exp_month = month[2]
+    with open('analysis_sales.txt', 'a') as f:
+        print('\nMonth with maximum expenditures:', man_exp_month, file=f)
 
+    # Summerising MARCH Sales
+    with open('analysis_sales.txt', 'a') as f:
+        print('\n \n \n----SUMMERY OF MARCH SALES (MAXIMUM EXPENDITURE)---- ', file=f)
+        print('\nSales:', sales[2], file=f)
+        print('\nExpenditure:', expenditures[2], file=f)
+        print('\nProfit/Loss:', (profit_loss(sales[2], expenditures[2])), file=f)
+        print('\nPercent Change:', (percentage(sales[2], expenditures[2])), file=f)
 
+    # Summerising 2018
+    with open('analysis_sales.txt', 'a') as f:
+        print('\n \n \n----SUMMERY OF 2018---- ', file=f)
+        print('\nTotal Sales:', total, file=f)
+        print('\nTotal Expenditure:', total_exp, file=f)
+        print('\nProfit/Loss:', profit_loss(total, total_exp), file=f)
+        print('\nPercent Change:', percentage(total, total_exp), file=f)
 
-    # percentage_decrease(sales[0], sales[1])
-    # print("Jan-Feb sales decreased by %: {}".format(round(percentage_decrease(sales[0], sales[6]), 2)))
-    #
-    #
-    # percentage_decrease(sales[1], sales[2])
-    # print("Feb-March sales decreased by %: {}".format(round(percentage_decrease(sales[1], sales[2]), 2)))
-    #
-    # percentage_decrease(sales[2], sales[3])
-    # print("March-April sales decreased by %: {}".format(round(percentage_decrease(sales[2], sales[3]), 2)))
-    #
-    # percentage_decrease(sales[3], sales[4])
-    # print("April-May sales decreased by %: {}".format(round(percentage_decrease(sales[3], sales[4]), 2)))
-    #
-    # percentage_decrease(sales[4], sales[5])
-    # print("May-June sales decreased by %: {}".format(round(percentage_decrease(sales[4], sales[5]), 2)))
-    #
-    # percentage_decrease(sales[5], sales[6])
-    # print("June-July sales decreased by %: {}".format(round(percentage_decrease(sales[5], sales[6]), 2)))
-    #
-    # percentage_decrease(sales[6], sales[7])
-    # print("July-Aug sales decreased by %: {}".format(round(percentage_decrease(sales[6], sales[7]), 2)))
-    #
-    # percentage_decrease(sales[7], sales[8])
-    # print("Aug-Sep sales decreased by %: {}".format(round(percentage_decrease(sales[6], sales[7]), 2)))
-    #
-    # percentage_decrease(sales[8], sales[9])
-    # print("Sep-Oct sales decreased by %: {}".format(round(percentage_decrease(sales[8], sales[9]), 2)))
-    #
-    # percentage_decrease(sales[9], sales[10])
-    # print("Oct-Nov sales decreased by %: {}".format(round(percentage_decrease(sales[9], sales[10]), 2)))
-    #
-    # percentage_decrease(sales[10], sales[11])
-    # print("Nov-Dec sales decreased by %: {}".format(round(percentage_decrease(sales[10], sales[11]), 2)))
-    #
-    # #print('Maximum expenditure in a year : {}'.format(max(expenditures)))
+# Making a new csv file.
+    field_names = ['month', 'sales', 'expenditure', 'profit/loss', 'percent_change', 'Observation']
+    data = [
+         {'month': 'Feb', 'sales': 1521, 'expenditure': 3373, 'profit/loss': -1852, 'percent_change':  -121.76, 'Observation': 'Min_Sales'},
+         {'month': 'July', 'sales': 7479, 'expenditure': 2084, 'profit/loss': 5395, 'percent_change':  72.14, 'Observation': 'Max_Sale'},
+         {'month': 'April', 'sales': 2051, 'expenditure': 1098, 'profit/loss': 953, 'percent_change':  46.47,'Observation': 'Min_Exp'},
+         {'month': 'March', 'sales': 1842, 'expenditure': 3965, 'profit/loss': -2123, 'percent_change':  -115.26,'Observation': 'Max_Exp'},
+             ]
+
+    with open('observation.csv', 'w+') as csv_file:
+         spreadsheet = csv.DictWriter(csv_file, fieldnames=field_names)
+         spreadsheet.writeheader()
+         spreadsheet.writerows(data)
+
 
 
 run_sales()
-print("*"* 50)
-#############################################################################################
-# Dataset 2: books.csv
 
+
+# Dataset 2: books.csv
+# Business Question: Is there a correlation between authour
+# and ratings?
+
+#1. Read books data from spreadsheet
 def read_books_data():
     data = []
 
@@ -220,81 +243,87 @@ def read_books_data():
 def run_books():
     data = read_books_data()
 
-    books = []
+    #Collect all books in a list
+    all_books = []
     for row in data:
-        books.append(data)
-    # print('All books_: {}'.format(books))
+        all_books.append(data)
 
-    # copying the print output to the file
-
-
-
-
+    #Collect all book titles in a list
     title = []
     for row in data:
         book_data = (row['title'])
         title.append(book_data)
-    print('All book titles: {}'.format(title))
 
-
+    # Collect all book authors in a list
     author = []
     for row in data:
         author_data = (row['authors'])
         author.append(author_data)
-    print('All book authors: {}'.format( author))
 
+    # Collect all book ratings in a list
     ratings = []
     for row in data:
         rating_data = int(row['ratings_count'])
         ratings.append((rating_data))
-        ratings.sort()
-    print('All ratings:{}'.format(ratings))
 
-    # print('Book with maximum ratings: {}'. format(max(ratings)))
-    #
-    # top_3_books = sorted(zip(ratings, title), reverse=True)[:3]
-    # print("Top 3 books with highest ratings:{}".format(top_3_books))
-
-    # with open('analysis_sales.txt', 'a') as f:
-    #     print("\n \n \n****** BOOKS ANALYSIS ******", file=f)
-    #     print('\nTOP 3 BOOKS:', top_3_books, file=f)
-
-    #top 5 book ratings
+    #Finding top 5 book ratings
     sorted_ratings_list = sorted(ratings, reverse=True) # note sort and sorted diff
+    top_3_ratings = (sorted_ratings_list[:3])
 
-    top_3 = (sorted_ratings_list[:3])
+    #Writing top 3 ratings to a file
     with open('analysis_sales.txt', 'a') as f:
-        print("\n \n \n****** BOOKS ANALYSIS ******", file=f)
-        print('\nTop 3 ratings of books:',top_3, file=f)
+        print('\n \n \n----BOOKS DATASET---- ', file=f)
+        print('\nTop 3 Ratings:', top_3_ratings, file=f)
 
-
-    print(ratings)
-    top_1_index = 2128944
+    # Finding the index of top 1 rating book
+    top_1 = 2128944
     with open('analysis_sales.txt', 'a') as f:
-        print('\nIndex:', ratings.index(top_1_index), file=f)
+        print('\nIndex:', ratings.index(top_1), file=f)
 
-    top_1_book = title[98]
+    # Using the index to find the name of book
+    top_1_bookname = title[90]
     with open('analysis_sales.txt', 'a') as f:
-         print('\nNo.1 book:', top_1_book, file=f)
+         print('\nNo.1 Book Name:', top_1_bookname, file=f)
 
-    author_book_1 = author[98]
+    # Using the index to find the name of the author
+    top_1_authorname = author[90]
     with open('analysis_sales.txt', 'a') as f:
-        print('\nAuthor:', author_book_1, file=f)
+         print('\nNo.1 Book - Author:', top_1_authorname, file=f)
 
-    top_2_index = 613758
+    # Finding the index of top 2 rating book
+    top_2 = 613758
     with open('analysis_sales.txt', 'a') as f:
-        print('\nIndex:', ratings.index(top_2_index), file=f)
+        print('\nIndex:', ratings.index(top_2), file=f)
 
-    # top_1_book = title[98]
-    # with open('analysis_sales.txt', 'a') as f:
-    #     print('\nNo.1 book:', top_1_book, file=f)
-    #
-    # author_book_1 = author[98]
-    # with open('analysis_sales.txt', 'a') as f:
-    #     print('\nAuthor:', author_book_1, file=f)
+    # Using the index to find the name of book
+    top_2_bookname = title[7]
+    with open('analysis_sales.txt', 'a') as f:
+        print('\nNo.2 Book Name:', top_2_bookname, file=f)
 
+    # Using the index to find the name of the author
+    top_2_authorname = author[7]
+    with open('analysis_sales.txt', 'a') as f:
+        print('\nNo.2 Book - Author:', top_2_authorname, file=f)
+
+    # Finding the index of top 3 rating book
+    top_3 = 308840
+    with open('analysis_sales.txt', 'a') as f:
+        print('\nIndex:', ratings.index(top_3), file=f)
+
+    # Using the index to find the name of book
+    top_3_bookname = title[81]
+    with open('analysis_sales.txt', 'a') as f:
+        print('\nNo.3 Book Name:', top_3_bookname, file=f)
+
+    # Using the index to find the name of the author
+    top_3_authorname = author[81]
+    with open('analysis_sales.txt', 'a') as f:
+        print('\nNo.3 Book - Author:', top_3_authorname, file=f)
+
+    # Random: book of the day
     chosen_book = random.choice(title)
-    print('Random book of the day: {}'.format(chosen_book))
+    with open('analysis_sales.txt', 'a') as f:
+        print('\nBook of the day:', chosen_book, file=f)
 
 
 

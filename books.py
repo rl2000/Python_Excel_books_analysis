@@ -1,5 +1,7 @@
 import csv
 import random
+import numpy as np
+import matplotlib.pyplot as plt
 
 
 # Business Question: Is there a correlation between sales
@@ -50,12 +52,12 @@ def run_sales():
     for row in data:
         sale = int(row['sales'])
         sales.append(sale)
-    print('All of the sales from Jan to Dec 2018: {}'.format(sales))
+
 
     #Writing the output to the file
     with open('analysis_sales.txt', 'w') as f:
-        print("*********** SALES ANALYSIS - 2018 ***********", file=f)
-        print('\nAll of the sales from Jan to Dec 2018:', sales, file=f)
+        print("*********** SALES ANALYSIS REPORT - 2018 ***********", file=f)
+        print('\nAll Sales:', sales, file=f)
 
     # Collect all expenditures in a list
     expenditures = []
@@ -63,11 +65,11 @@ def run_sales():
     for row in data:
         spending = int(row['expenditure'])
         expenditures.append(spending)
-    print('All sales expenditures from Jan to Dec 2018: {}'.format(expenditures))
+
 
     #Writing the output to the file
     with open('analysis_sales.txt', 'a') as f:
-        print('\nAll sales expenditures from Jan to Dec 2018:', expenditures, file=f)
+        print('\nAll Expenditures:', expenditures, file=f)
 
     # Collect all months in a list
     month = []
@@ -79,38 +81,38 @@ def run_sales():
 
     # Output total sales for all months
     total = sum(sales)
-    print('Total sales across all months: {}'.format(total))
+
 
     #Writing the output to the file
     with open('analysis_sales.txt', 'a') as f:
-        print('\nTotal sales across all months:', total, file=f)
+        print('\nTotal sales:', total, file=f)
 
     # Output total sales for all months
     total_exp = sum(expenditures)
-    print('Total expenditure across all months: {}'.format(total_exp))
+
 
     # Writing the output to the file
     with open('analysis_sales.txt', 'a') as f:
-        print('\nTotal expenditure across all months:', total_exp, file=f)
+        print('\nTotal Expenditure:', total_exp, file=f)
 
     # Output average for all months
     average = total / len(sales)
-    print('Average sales from Jan to Dec: {}'.format(round(average)))
+
 
     #Writing the output to the file
     with open('analysis_sales.txt', 'a') as f:
-        print('\nAverage sales from Jan to Dec:', (round(average)), file=f)
+        print('\nAverage sales:', (round(average)), file=f)
 
 
     # ****MIN-MAX SALES****
 
     # Minimum Sales: Writing the output to the file
     with open('analysis_sales.txt', 'a') as f:
-        print('\n \n \nMinimum sales in a year:', (min(sales)), file=f)
+        print('\n \n \nMinimum sales:', (min(sales)), file=f)
 
 
     # Minimum Sales: Finding the index of Min sales
-    print('Minimum sales in a year : {}'. format(min(sales)))
+
     min_value = 1521
     with open('analysis_sales.txt', 'a') as f:
         print('\nIndex:', sales.index(min_value), file=f)
@@ -120,17 +122,11 @@ def run_sales():
     with open('analysis_sales.txt', 'a') as f:
         print('\nMonth with minimum sales:', min_sales_month, file=f)
 
-    #Summerising Feb Sales
-    with open('analysis_sales.txt', 'a') as f:
-        print('\n \n \n----SUMMERY OF FEBRUARY SALES (MINIMUM SALES)---- ', file=f)
-        print('\nSales:', sales[1], file=f)
-        print('\nExpenditure:', expenditures[1], file=f)
-        print('\nProfit/Loss:', (profit_loss(sales[1], expenditures[1])), file=f)
-        print('\nPercent Change:', (percentage(sales[1], expenditures[1])), file=f)
+
 
     # Maximun Sales: Writing the output to the file
     with open('analysis_sales.txt', 'a') as f:
-        print('\n \n \nMaximum sales in a year:', (max(sales)), file=f)
+        print('\n \n \nMaximum sales:', (max(sales)), file=f)
 
     # Maximun Sales: Finding the index of Max sales
     max_value = 7479
@@ -142,22 +138,14 @@ def run_sales():
     with open('analysis_sales.txt', 'a') as f:
         print('\nMonth with maximum sales:', max_sales_month, file=f)
 
-    # Summerising JULY Sales
-    with open('analysis_sales.txt', 'a') as f:
-        print('\n \n \n----SUMMERY OF JULY SALES (MAXIMUM SALES)---- ', file=f)
-        print('\nSales:', sales[6], file=f)
-        print('\nExpenditure:', expenditures[6], file=f)
-        print('\nProfit/Loss:', (profit_loss(sales[6], expenditures[6])), file=f)
-        print('\nPercent Change:', (percentage(sales[6], expenditures[6])), file=f)
 
     # ****MIN-MAX EXPENDITURE****
 
     # Minimum Expenditure: Writing the output to the file
     with open('analysis_sales.txt', 'a') as f:
-        print('\n \n \nMinimum expenditure in a year:', (min(expenditures)), file=f)
+        print('\n \n \nMinimum expenditure:', (min(expenditures)), file=f)
 
     # Minimum Expenditure: Finding the index of Min Expenditure
-    print('Minimum expenditure in a year : {}'.format(min(expenditures)))
     min_value = 1098
     with open('analysis_sales.txt', 'a') as f:
         print('\nIndex:', expenditures.index(min_value), file=f)
@@ -167,20 +155,14 @@ def run_sales():
     with open('analysis_sales.txt', 'a') as f:
         print('\nMonth with minimum expenditures:', min_exp_month, file=f)
 
-    # Summerising APRIL Sales
-    with open('analysis_sales.txt', 'a') as f:
-        print('\n \n \n----SUMMERY OF APRIL SALES (MINIMUM EXPENDITURE)---- ', file=f)
-        print('\nSales:', sales[3], file=f)
-        print('\nExpenditure:', expenditures[3], file=f)
-        print('\nProfit/Loss:', (profit_loss(sales[3], expenditures[3])), file=f)
-        print('\nPercent Change:', (percentage(sales[3], expenditures[3])), file=f)
+
 
     # Maximum Expenditure: Writing the output to the file
     with open('analysis_sales.txt', 'a') as f:
-        print('\n \n \nMaximum expenditure in a year:', (max(expenditures)), file=f)
+        print('\n \n \nMaximum expenditure:', (max(expenditures)), file=f)
+
 
     # Maximum Expenditure: Finding the index of Max Expenditure
-    print('Maximum expenditure in a year : {}'.format(max(expenditures)))
     max_value = 3965
     with open('analysis_sales.txt', 'a') as f:
         print('\nIndex:', expenditures.index(max_value), file=f)
@@ -190,13 +172,40 @@ def run_sales():
     with open('analysis_sales.txt', 'a') as f:
         print('\nMonth with maximum expenditures:', man_exp_month, file=f)
 
-    # Summerising MARCH Sales
+
+
+    # Summerising Rest of the month Sales
     with open('analysis_sales.txt', 'a') as f:
-        print('\n \n \n----SUMMERY OF MARCH SALES (MAXIMUM EXPENDITURE)---- ', file=f)
-        print('\nSales:', sales[2], file=f)
-        print('\nExpenditure:', expenditures[2], file=f)
-        print('\nProfit/Loss:', (profit_loss(sales[2], expenditures[2])), file=f)
+        print('\n \n \n----PERCENT CHANGE OF SALES AS PER MONTHS---- ', file=f)
+        print('\n \n \n----JANUARY---- ', file=f)
+        print('\nPercent Change:', (percentage(sales[0], expenditures[0])), file=f)
+        print('\n \n \n----FEBRUARY---- ', file=f)
+        print('\nPercent Change:', (percentage(sales[1], expenditures[1])), file=f)
+        print('\n \n \n----MARCH---- ', file=f)
         print('\nPercent Change:', (percentage(sales[2], expenditures[2])), file=f)
+        print('\n \n \n----APRIL---- ', file=f)
+        print('\nPercent Change:', (percentage(sales[4], expenditures[4])), file=f)
+        print('\n \n \n----MAY---- ', file=f)
+        print('\nPercent Change:', (percentage(sales[4], expenditures[4])), file=f)
+        print('\n \n \n----JUNE---- ', file=f)
+        print('\nPercent Change:', (percentage(sales[5], expenditures[5])), file=f)
+        print('\n \n \n----JULY---- ', file=f)
+        print('\nPercent Change:', (percentage(sales[6], expenditures[6])), file=f)
+        print('\n \n \n----AUGUST---- ', file=f)
+        print('\nPercent Change:', (percentage(sales[7], expenditures[7])), file=f)
+        print('\n \n \n----SEPTEMBER---- ', file=f)
+        print('\nPercent Change:', (percentage(sales[8], expenditures[8])), file=f)
+        print('\n \n \n----OCTOBER---- ', file=f)
+        print('\nPercent Change:', (percentage(sales[9], expenditures[9])), file=f)
+        print('\n \n \n----NOVEMBER---- ', file=f)
+        print('\nPercent Change:', (percentage(sales[10], expenditures[10])), file=f)
+        print('\n \n \n----DECEMBER---- ', file=f)
+        print('\nPercent Change:', (percentage(sales[11], expenditures[11])), file=f)
+
+
+
+
+
 
     # Summerising 2018
     with open('analysis_sales.txt', 'a') as f:
@@ -207,19 +216,48 @@ def run_sales():
         print('\nPercent Change:', percentage(total, total_exp), file=f)
 
 # Making a new csv file.
-    field_names = ['month', 'sales', 'expenditure', 'profit/loss', 'percent_change', 'Observation']
+    field_names = ['month',  'percent_change', 'Observation']
     data = [
-         {'month': 'Feb', 'sales': 1521, 'expenditure': 3373, 'profit/loss': -1852, 'percent_change':  -121.76, 'Observation': 'Min_Sales'},
-         {'month': 'July', 'sales': 7479, 'expenditure': 2084, 'profit/loss': 5395, 'percent_change':  72.14, 'Observation': 'Max_Sale'},
-         {'month': 'April', 'sales': 2051, 'expenditure': 1098, 'profit/loss': 953, 'percent_change':  46.47,'Observation': 'Min_Exp'},
-         {'month': 'March', 'sales': 1842, 'expenditure': 3965, 'profit/loss': -2123, 'percent_change':  -115.26,'Observation': 'Max_Exp'},
-             ]
+        {'month': 'Jan', 'percent_change':  38.84, 'Observation': ''},
+        {'month': 'Feb',  'percent_change':  -121.76, 'Observation': 'Min_Sales'},
+        {'month': 'March', 'percent_change':  -115.26,'Observation': 'Max_Exp'},
+        {'month': 'April', 'percent_change':  46.47,'Observation': 'Min_Exp'},
+        {'month': 'May', 'percent_change': -76.27, 'Observation': ''},
+        {'month': 'June', 'percent_change':-5.61, 'Observation': 'Max_Sale'},
+        {'month': 'July', 'percent_change':  72.14, 'Observation': ''},
+        {'month': 'August', 'percent_change': 62.81, 'Observation': ''},
+        {'month': 'September', 'percent_change': 54.38, 'Observation': ''},
+        {'month': 'October', 'percent_change': 79.61, 'Observation': ''},
+        {'month': 'November', 'percent_change': 80.19, 'Observation': ''},
+        {'month': 'December', 'percent_change': -94.92, 'Observation': ''},
+
+    ]
 
     with open('observation.csv', 'w+') as csv_file:
          spreadsheet = csv.DictWriter(csv_file, fieldnames=field_names)
          spreadsheet.writeheader()
          spreadsheet.writerows(data)
 
+    #Plotting the percentage difference on graph
+    # Make a fake dataset:
+    observation = (38.84,-121.76,-115.26,46.47,-76.27,
+                    -5.61,72.14,62.81,54.38,79.61,80.19,-94.92)
+
+    month = ('JAN', 'FEB', 'MARCH', 'APRIL','MAY', 'JUNE',
+             'JULY', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC')
+    y_pos = np.arange(len(month))
+
+
+
+    # Create bars
+    plt.bar(y_pos, observation)
+
+    # Create names on the x-axis
+    plt.xticks(y_pos, month)
+
+    # Show graphic
+    plt.savefig("mygraph.png")
+    plt.show()
 
 
 run_sales()

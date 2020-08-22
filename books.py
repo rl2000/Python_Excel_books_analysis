@@ -21,6 +21,9 @@ def read_books_data():
 def myFunc(e):
   return e['average_rating']
 
+def myFunc_1(x):
+  return x['  num_pages']
+
 #.Run books.csv
 def run_books():
     data = read_books_data()
@@ -33,8 +36,15 @@ def run_books():
 
 
     # Get only name, author and avg ratings
+    top_3 = ratings_list[:3]
+    book = []
 
 
+    for row in top_3:
+        top_3_books = []
+        top_3_books= [row['title'],row['authors'], row['average_rating']]
+        book.append(top_3_books)
+    print(book)
 
     # Search by publisher name, get book title
     publisher_list = data
@@ -49,6 +59,22 @@ def run_books():
 
     print(book_title_by_pub)
 
+    #short reads
+    # Finding books with 100 pages
+    page_list = data
+    book_short_read = []
+    print(page_list)
+
+
+    for row in page_list:
+    #
+         if int(row['  num_pages']) <= 100:
+             short = []
+             short = [row['title'], row['  num_pages']]
+             #page_list.sort(key=myFunc_1, reverse=True)
+             book_short_read.append(short)
+
+    print('SHORT: {}'.format(book_short_read[:10]))
 
 
 

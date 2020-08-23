@@ -1,0 +1,46 @@
+
+ 
+ 
+----BOOKS DATASET ANALYSIS---- 
+
+ 
+ 
+Top 3 Ratings: 
+ 
+ 
+ [['Middlesex Borough (Images of America: New Jersey)', 'Middlesex Borough Heritage Committee', '5'], ['Love You Until--', 'Lisa McCourt/Cyd Moore', '4.5'], ['Stories and Early Novels: Pulp Stories / The Big Sleep / Farewell  My Lovely / The High Window', 'Raymond Chandler/Frank MacShane', '4.5']]
+
+ 
+ 
+Book by publisher - 1: 
+ 
+ 
+ [['Pride and Prejudice', 'Oxford University Press'], ['Dubliners', 'Oxford University Press'], ['A Sentimental Education', 'Oxford University Press']]
+
+ 
+ 
+Book by publisher - 2: 
+ 
+ 
+ [['Before The Mayflower A History of Black America', 'Penguin Books'], ['The Histories', 'Penguin Books'], ['Salt: A World History', 'Penguin Books']]
+
+ 
+ 
+Book by publisher - 3: 
+ 
+ 
+ [['Beauty: The Invisible Embrace', 'Harper Perennial'], ['Soul Mates: Honouring the Mysteries of Love and Relationship', 'Harper Perennial']]
+
+ 
+ 
+Short Reads: 
+ 
+ 
+ [['Love You Until--', 'Lisa McCourt/Cyd Moore', '32'], ['Before The Mayflower A History of Black America', 'Lerone Bennett Jr.', '70'], ['Here Is New York', 'E.B. White/Roger Angell/Barbara Cohen/Judith Stonehill', '58'], ['I Blink: And Other Questions About My Body', 'Brigid Avison', '32'], ['Farm Animals (A Chunky Book)', 'Phoebe Dunn', '28'], ['Lysistrata', 'Aristophanes/Douglass Parker', '98'], ['The Wind Thief', 'Judi Barrett/Diane Dawson Hearn', '32'], ['The Metamorphosis (Graphic Novel Adaptation)', 'Peter Kuper/Franz Kafka/Kerstin Hasenpusch', '80'], ["Cliffs Notes on Aristophanes' Lysistrata  The Birds  The Clouds  The Frogs", 'W. John Campbell', '80']]
+
+ 
+ 
+Random book of the day : 
+ 
+ 
+ OrderedDict([('bookID', '11990'), ('title', 'The Rebel'), ('authors', 'Albert Camus/Anthony Bower/Herbert Read'), ('average_rating', '4.15'), ('  num_pages', '320'), ('ratings_count', '9227'), ('publication_date', '01/01/1992'), ('publisher', 'Vintage')])
